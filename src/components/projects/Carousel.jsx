@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 const images = [
-    '/projects/gif-expert-app/gif-expert-app-1.png',
-    '/projects/gif-expert-app/gif-expert-app-2.png',
+    '/projects/gif-expert-app/carousel-1.png',
+    '/projects/gif-expert-app/carousel-2.png',
 ];
 export const Carousel = () => {
     const [current, setCurrent] = useState(0);
