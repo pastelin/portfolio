@@ -13,8 +13,8 @@ export const Tools = () => {
                             src="/tools/java.svg"
                             alt="Java"
                             title="Java"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -22,8 +22,8 @@ export const Tools = () => {
                             src="/tools/spring.svg"
                             alt="Spring Boot"
                             title="Spring Boot"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -31,8 +31,8 @@ export const Tools = () => {
                             src="/tools/react.svg"
                             alt="React"
                             title="React"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -40,8 +40,8 @@ export const Tools = () => {
                             src="/tools/javascript.svg"
                             alt="JavaScript"
                             title="JavaScript"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -49,8 +49,8 @@ export const Tools = () => {
                             src="/tools/html5.svg"
                             alt="HTML5"
                             title="HTML5"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -58,8 +58,8 @@ export const Tools = () => {
                             src="/tools/css3.svg"
                             alt="CSS3"
                             title="CSS3"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -67,8 +67,8 @@ export const Tools = () => {
                             src="/tools/mysql.svg"
                             alt="MySQL"
                             title="MySQL"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -76,8 +76,8 @@ export const Tools = () => {
                             src="/tools/informix.svg"
                             alt="Informix"
                             title="Informix"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -85,8 +85,8 @@ export const Tools = () => {
                             src="/tools/junit.svg"
                             alt="JUnit"
                             title="JUnit"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -94,8 +94,8 @@ export const Tools = () => {
                             src="/tools/git.svg"
                             alt="Git"
                             title="Git"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                     <li className="tools-item">
@@ -103,8 +103,8 @@ export const Tools = () => {
                             src="/tools/maven.svg"
                             alt="Maven"
                             title="Maven"
-                            width="80"
-                            height="80"
+                            width="90"
+                            height="90"
                         />
                     </li>
                 </ul>

@@ -13,16 +13,15 @@ export const Hero = () => {
                     </h1>
                     <h2 className="hero-subtitle">
                         <span className="typing-animation">
-                            DESARROLLADOR FULL STACK JAVA | INGENIERO DE
-                            SOFTWARE BACKEND
+                            Soluciones Robustas en Java | De la API al Frontend
                         </span>
                     </h2>
                     <p className="hero-description">
                         Ingeniero de software con experiencia en banca,
                         especializado en Java y Spring Boot. Experto en
-                        modernización de sistemas críticos, migraciones exitosas
-                        y desarrollo de APIs RESTful. Apasionado por el
-                        aprendizaje continuo y las metodologías ágiles.
+                        {' '}<span className='bold'>modernización de sistemas críticos, migraciones exitosas</span>{' '}
+                        y desarrollo de {' '}<span className='bold'>APIs RESTful</span>. Apasionado por el
+                        {' '}<span className='bold'>aprendizaje continuo</span> y las metodologías ágiles.
                     </p>
                     <div className="hero-stats">
                         <div className="stat">
