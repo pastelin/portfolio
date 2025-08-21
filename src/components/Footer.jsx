@@ -9,12 +9,11 @@ export const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
-                        >
+                            >
                             <img
                                 src="/contact/linkedin.svg"
                                 alt="Linkedin"
-                                width="32"
-                                height="32"
+                                className="footer-icon"
                             />
                         </a>
                     </li>
@@ -24,12 +23,11 @@ export const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub"
-                        >
+                            >
                             <img
                                 src="/contact/github.svg"
                                 alt="Github"
-                                width="32"
-                                height="32"
+                                className="footer-icon"
                             />
                         </a>
                     </li>

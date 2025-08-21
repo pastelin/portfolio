@@ -21,7 +21,7 @@ export const FeaturedProjects = () => {
                             {project.description}
                         </p>
                         <p className="project-tech-list">
-                            {project.techs.map((tech) => (
+                            {project.techs.slice(0,4).map((tech) => (
                                 <span key={uuidv4()} className="project-tech">
                                     {tech.name}
                                 </span>
