@@ -29,14 +29,8 @@ body {
     background: var(--color-bg-gradient);
     color: var(--color-text-light);
     scroll-behavior: smooth;
-    /* text-align: justify; */
     min-width: var(--min-width);
     line-height: 1.7;
-}
-
-.header {
-    background-color: var(--color-bg-dark);
-    padding: 1.5rem;
 }
 
 .bold {
@@ -44,7 +38,6 @@ body {
 }
 
 .section-title {
-    /* margin-bottom: 2.5rem; */
     font-weight: 700;
 }
 
@@ -59,39 +52,145 @@ img {
     height: auto;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
+/* === Variables y Estilos Base de la Navegación === */
+.header {
+    width: 100%;
+    position: fixed; /* Mantiene el menú fijo en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Asegura que esté por encima de otro contenido */
+    background-color: var(
+        --color-bg-dark
+    ); /* Usa tu variable de color de fondo oscuro */
+    border-bottom: 1px solid #333; /* Un borde sutil */
 }
 
-.nav-links {
+.nav {
+    height: 6rem; /* Altura de la barra de navegación */
     display: flex;
-    gap: 2rem;
+    justify-content: space-between; /* Espacia el logo y los enlaces */
+    align-items: center;
+    max-width: 1200px; /* Limita el ancho en pantallas grandes */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-primary); /* Usa tu color de acento */
+    text-decoration: none;
+    letter-spacing: 3px; /* Espaciado entre letras */
+}
+
+/* === Estilos para el Menú de Escritorio === */
+.nav-menu-desktop {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* Espacio entre los enlaces */
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
-    color: var(--color-white);
     text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.nav-link.active {
-    font-weight: bold;
+.nav-link:hover {
     color: var(--color-primary);
+}
+
+/* Estilo para el enlace de la página activa (gracias a NavLink) */
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+/* === Estilos para el Menú Móvil (inicialmente oculto en escritorio) === */
+.nav-menu-mobile {
+    position: fixed;
+    top: 6rem; /* Justo debajo de la barra de navegación */
+    left: -100%; /* Empieza fuera de la pantalla a la izquierda */
+    width: 100%;
+    height: calc(100vh - 6rem);
+    background-color: var(--color-bg-dark);
+    padding: 4rem 2rem;
+    transition: left 0.4s ease-in-out; /* Animación de entrada/salida */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* ESTADO ACTIVO: Cuando el menú esté abierto, se deslizará a la vista */
+.nav-menu-mobile.is-active {
+    left: 0;
+}
+
+.nav-link-mobile {
+    font-size: 1.5rem; /* Letras grandes para fácil selección en móvil */
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+.nav-link-mobile.active {
+    color: var(--color-primary);
+}
+
+/* === Estilos del Botón Hamburguesa === */
+.nav-toggle {
+    display: none; /* Oculto por defecto en escritorio */
+    cursor: pointer;
+    width: 38px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-text-medium);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ESTADO ACTIVO: Animación de la hamburguesa a una 'X' */
+.nav-toggle.is-active .hamburger-line:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+.nav-toggle.is-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.is-active .hamburger-line:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* === Media Query para la Magia Responsiva === */
+@media (max-width: 768px) {
+    .nav-menu-desktop {
+        display: none; /* Oculta el menú de escritorio */
+    }
+
+    .nav-toggle {
+        display: flex; /* Muestra el botón de hamburguesa */
+    }
 }
 
 /* Estilos del Hero */
 
+.main-content {
+    position: relative;
+    top: 8rem;
+}
+
 .hero {
-    /* min-height: 100vh; */
     display: flex;
     align-items: center;
 }
@@ -102,8 +201,6 @@ img {
     gap: 2rem;
     max-width: var(--max-width);
     min-width: var(--min-width);
-    /* margin: 0 auto; */
-    /* padding: 1rem 0.5rem; */
     grid-template-areas: 'image' 'content';
     justify-items: center;
 }
@@ -326,8 +423,10 @@ img {
 /* Estilos para Footer */
 
 .footer {
+    /* position: relative; */
     background-color: var(--color-bg-dark);
     padding: 1rem 0;
+    margin-top: 6rem;
 }
 
 .footer-list {
@@ -434,24 +533,25 @@ img {
 
 /* Estilos para ProjectDetailPage */
 .project-detail {
+    width: 90%;
     max-width: 900px;
     margin: 5rem auto 0;
-    /* line-height: 1.8; */
+    position: relative;
 }
 
 .project-detail > article {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .project-title-xl {
-    font-size: 2.3rem;
+    /* font-size: 2.3rem; */
     font-weight: 700;
     margin-bottom: 2rem;
     color: var(--color-primary);
 }
 
 .project--relevant {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: var(--color-primary);
@@ -572,7 +672,7 @@ img {
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-content {
@@ -580,8 +680,9 @@ img {
         width: 100%;
     }
 
-    .hero-title {
-        font-size: 3rem;
+    .hero-title,
+    .project-title-xl {
+        font-size: 2.8rem;
     }
 
     .hero-subtitle {
@@ -639,12 +740,22 @@ img {
     .featured-projects,
     .tools,
     .contact-cta {
-        /* padding: 0; */
         height: 100vh;
     }
 
     .contact-cta-description {
         font-size: 1.2rem;
-        /* margin-bottom: 1.5rem; */
+    }
+
+    .main-content {
+        top: 0rem;
+    }
+
+    .project-detail {
+        top: 8rem;
+    }
+
+    .project-detail > article {
+        margin-bottom: 10rem;
     }
 }

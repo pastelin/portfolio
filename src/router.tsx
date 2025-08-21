@@ -13,6 +13,8 @@ export const AppRouter = () => {
                         path="/projects/:projectId"
                         element={<ProjectDetailPage />}
                     />
+                    <Route path="*" element={<IndexPage />} />
+                    
                 </Route>
             </Routes>
         </BrowserRouter>
